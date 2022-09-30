@@ -1,51 +1,51 @@
-const generateHTML = (teamInfo) => {
-    team = ""
-    for (let i = 0; i < teamInfo.length; i++)
-        if (teamInfo[i].getRole() === "Manager") {
-            team +=
+const generateHTML = (roster) => {
+    lineup = ""
+    for (let i = 0; i < roster.length; i++)
+        if (roster[i].getRole() === "Manager") {
+            lineup +=
             `
-<div class="card m-3" style="width: 15rem;">
-<div class="card-header text-white bg-primary mt-2 mb-3">
-    <h3>${teamInfo[i].getName()}</h3>
-    <h4>👓 ${teamInfo[i].getRole()}</h4>
-    </div>
-    <div class="card-body">
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item">ID: ${teamInfo[i].getId()}</li>
-        <li class="list-group-item">Email: <a href = "mailto:${teamInfo[i].getEmail()}">${teamInfo[i].getEmail()}</a></li>
-        <li class="list-group-item">Office number: ${teamInfo[i].getOfficeNumber()}</li>
-    </ul>
-    </div>
+            <div class="card m-3" style="width: 20rem;">
+            <div class="card-header bg-success text-white m-2">
+                <h3>${roster[i].getName()}</h3>
+                <h4>${roster[i].getRole()}</h4>
+            </div>
+                    <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">ID: ${roster[i].getId()}</li>
+            <li class="list-group-item">Email: <a href = "mailto:${roster[i].getEmail()}">${roster[i].getEmail()}</a></li>
+            <li class="list-group-item">Office number: ${roster[i].getOfficeNumber()}</li>
+        </ul>
+        </div>
 </div>
-`       } else if (teamInfo[i].getRole() === "Intern") {
-            team +=
+`       } else if (roster[i].getRole() === "Intern") {
+            lineup +=
             `
-<div class="card m-3" style="width: 15rem;">
-    <div class="card-header text-white bg-primary mt-2 mb-3">
-    <h3>${teamInfo[i].getName()}</h3>
-    <h4>📓 ${teamInfo[i].getRole()}</h4>
-    </div>
-    <div class="card-body">
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item">ID: ${teamInfo[i].getId()}</li>
-        <li class="list-group-item">Email: <a href = "mailto:${teamInfo[i].getEmail()}">${teamInfo[i].getEmail()}</a></li>
-        <li class="list-group-item">School: ${teamInfo[i].getSchool()}</li>
-    </ul>
-    </div>
-</div>
-`       } else if (teamInfo[i].getRole() === "Engineer") {
-            team +=
+            <div class="card m-3" style="width: 20rem;">
+            <div class="card-header bg-success text-white m-2">
+                <h3>${roster[i].getName()}</h3>
+                <h4>${roster[i].getRole()}</h4>
+        </div>
+        <div class="card-body">
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item">ID: ${roster[i].getId()}</li>
+            <li class="list-group-item">Email: <a href = "mailto:${roster[i].getEmail()}">${roster[i].getEmail()}</a></li>
+            <li class="list-group-item">School: ${roster[i].getSchool()}</li>
+            </ul>
+        </div>
+        </div>
+`       } else if (roster[i].getRole() === "Engineer") {
+            lineup +=
             `
-            <div class="card m-3" style="width: 15rem;">
-            <div class="card-header text-white bg-primary mt-2 mb-3">
-                <h3>${teamInfo[i].getName()}</h3>
-                <h4>📱 ${teamInfo[i].getRole()}</h4>
+            <div class="card m-3" style="width: 20rem;">
+            <div class="card-header bg-success text-white m-2">
+                <h3>${roster[i].getName()}</h3>
+                <h4> ${roster[i].getRole()}</h4>
             </div>
             <div class="card-body">
                 <ul class="list-group list-group-flush">
-                <li class="list-group-item">ID: ${teamInfo[i].getId()}</li>
-                <li class="list-group-item">Email: <a href = "mailto:${teamInfo[i].getEmail()}">${teamInfo[i].getEmail()}</a></li>
-                <li class="list-group-item">GitHub: <a href = "https://github.com/${teamInfo[i].getGitHub()}" target="_blank">${teamInfo[i].getGitHub()}</a></li>
+                <li class="list-group-item">ID: ${roster[i].getId()}</li>
+                <li class="list-group-item">Email: <a href = "mailto:${roster[i].getEmail()}">${roster[i].getEmail()}</a></li>
+                <li class="list-group-item">GitHub: <a href = "https://github.com/${roster[i].getGitHub()}" target="_blank">${roster[i].getGitHub()}</a></li>
                 </ul>
             </div>
             </div>
@@ -68,11 +68,9 @@ const generateHTML = (teamInfo) => {
 
     <header>
         <nav>
-            <div class="jumbotron jumbotron-fluid bg-danger  text-white" id="jumboTron">
+            <div class="jumbotron jumbotron-fluid bg-secondary text-white" id="jumboTron">
                 <div class="container">
                     <h1 class="display-2">My Team</h1>
-                    <p class="lead">This is the team that makes the dream work.
-                    </p>
                 </div>
             </div>
         </nav>
@@ -80,7 +78,7 @@ const generateHTML = (teamInfo) => {
 
     <div class="container">
         <div class="row justify-content-center">
-        ${team}
+        ${lineup}
         </div>
     </div>
 

@@ -7,7 +7,7 @@ const Engineer = require('./lib/Engineer');
 
 const generateHTML = require('./src/generateHTML')
 
-const teamInfo = [];
+const roster = [];
 
 const questions = [
     {
@@ -40,7 +40,7 @@ const questions = [
 function managerPrompt () {
     inquirer.prompt(questions).then(response => {
         const manager = new Manager(response.name, response.id, response.email, response.officeNumber)
-        teamInfo.push(manager);
+        roster.push(manager);
         addMembers();
     })
     
@@ -70,7 +70,7 @@ function engineerPrompt () {
     }
     ]).then((response) => {
         const engineer = new Engineer(response.name, response.id, response.email, response.gitHub)
-        teamInfo.push(engineer);
+        roster.push(engineer);
         addMembers();
     })
 }
@@ -99,7 +99,7 @@ function internPrompt () {
         }
     ]).then((response) => {
         const intern = new Intern(response.name, response.id, response.email, response.school)
-        teamInfo.push(intern)
+        roster.push(intern)
         addMembers()
     })
 }
@@ -130,8 +130,8 @@ function init() {
 }
 
 const writeFunction = () => {
-        console.log(teamInfo)
-        fs.writeFile('./dist/index.html', generateHTML(teamInfo), (err) => 
+        console.log(roster)
+        fs.writeFile('./dist/index.html', generateHTML(roster), (err) => 
     err ? console.log(err) : console.log('Successfully created team page.')
 )}
 
