@@ -1,26 +1,22 @@
 {
-  "name": "team-generator",
+  "name": "team-profile",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "directories": {
-    "lib": "lib",
-    "test": "tests"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/skidmoreco/team-generator.git"
+    "url": "git+https://github.com/ShahidHashmi1/node-team-profile.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/skidmoreco/team-generator/issues"
+    "url": "https://github.com/ShahidHashmi1/node-team-profile/issues"
   },
-  "homepage": "https://github.com/skidmoreco/team-generator#readme",
+  "homepage": "https://github.com/ShahidHashmi1/node-team-profile#readme",
   "dependencies": {
     "inquirer": "^8.2.4",
     "jest": "^24.9.0"
