@@ -1,14 +1,13 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 # team-generator
-As an assignment for Ohio State Univeristy Bootcamp. We were required create our own portfolio using HTML 5 & CSS3.
+As an assignment for Ohio State Univeristy Bootcamp. We were required to build a Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person. Testing is key to making code maintainable, so you’ll also write a unit test for every part of your code and ensure that it passes each test.
 ## Live Site:
 --- 
 [Github pages](https://skidmoreco.github.io/skidmorecorey-portfolio/)
 
 ## SCREENSHOTS:
 ---
-<img src="./images/SC1.png" alt="Screenshot of Hero img">
-<img src="./images/SC2.png" alt="Screenshot of Recent projects">
+<img src="./IMG/SC1.png" alt="Screenshot of Index.HTML">
 
 
 
