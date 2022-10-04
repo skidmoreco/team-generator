@@ -4,6 +4,7 @@ As an assignment for Ohio State Univeristy Bootcamp. We were required to build a
 ## Live Site:
 --- 
 [Github pages](https://github.com/skidmoreco/team-generator)
+[Google Drive Link](https://drive.google.com/file/d/1mfNfKQ4dxaATKGxfMkv3vfHfWgJv_Qwf/view?usp=sharing)
 
 ## SCREENSHOTS:
 ---
